@@ -5,8 +5,10 @@
 
   .row
     .offset-3.col-3
-      =link_to "Atrás", hospitals_path, class: "btn btn-secundary btn-block"
+      =link_to t('application.back_to',
+                model: t('application.list_of', model: t('activerecords.modules.hospital.other'))),
+      hospitals_path, class: "btn btn-secundary btn-block"
     .col-3
-      =button_tag "Guardar", class: "btn btn-outline-success btn-block", 
-      'data-disable-with': "Guardando..."
+      =button_tag t('application.save'), class: "btn btn-outline-success btn-block", 
+        'data-disable-with': t('application.saving')
 

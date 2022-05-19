@@ -1,9 +1,11 @@
 %p#notice= notice 
 .card.ml-4.m-4
   .card-body  
-    %h5.card-title Nombre: 
+    %h5.card-title t('activerecord.atributes.hospital.name': 
     %p.card-text &nbsp #{@hospital.name}
 
 .row.mt-3
   .offset-3.col-3
-    =link_to "Atrás", hospitals_path, class: "btn btn-secundary btn-block"
+    =link_to t('application.back_to',
+                model: t('application.list_of', model: t('activerecords.modules.hospital.other'))),
+    hospitals_path, class: "btn btn-secundary btn-block"
