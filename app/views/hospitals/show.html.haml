@@ -1,10 +1,12 @@
-%p#notice = notice
+.page-header.m-4
+  %p{:style => "color: green"}= notice
 
 .card.ml-4.m-4
   .card-body
-    %h5.card-title Nombre:
+    %h5.card-title= t('activerecords.attributes.hospital.name') 
     %p.card-text &nbsp #{@hospital.name}
 
 .row.mt-3
   .offset-3.col-3
-    = link_to "Atras", hospitals_path, class: "btn btn-secondary btn-block"
+    = link_to t('application.back_to', model: t('application.list_of', model: t('activerecords.modules.hospital.other'))),
+                hospitals_path, class: "btn btn-secondary btn-block"

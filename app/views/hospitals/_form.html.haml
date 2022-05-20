@@ -1,11 +1,12 @@
 = form_for @hospital, validate: true do |f|
   .form-group.ml-4.mr-4
-    f.label :name, class: "form-label required"
+    %h5.card-title= t('activerecords.attributes.hospital.name') 
     = f.text_field :name, autofocus: true, class: "form-control"
 
   .row
     .offset-3.col-3
-      = link_to "Atras", hospitals_path, class: "btn btn-secondary btn-block"
+      = link_to t('application.back_to', model: t('application.list_of', model: t('activerecords.modules.hospital.other'))),
+              hospitals_path, class: "btn btn-secondary btn-block"
     .col-3
-      = button_tag "Guardar", class: "btn btn-outline-success btn-block",
-      'data-disable-with': "Guardando..." 
+      = button_tag t('application.save'), class: "btn btn-outline-success btn-block",
+      'data-disable-with': t('application.saving')

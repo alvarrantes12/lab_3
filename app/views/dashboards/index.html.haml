@@ -1,5 +1,5 @@
 .div.m-4
     %h1.mb-4
-        ="CRUDs disponibles"
+        = t('application.availables', model: t('activerecords.modules.crud.other'))
 .float-left.ml-4
-    = link_to "Hospitales", hospitals_path, class: 'btn btn-primary'
+    = link_to t('activerecords.modules.hospital.other'), hospitals_path, class: 'btn btn-primary'
