@@ -1,0 +1,27 @@
+es:
+  application:
+    list_of: Lista de %{model}
+    name: Nombre del %{model}
+    new: Agregar nuevo %{model}
+    see: Ver %{model}
+    edit: Editar %{model}
+    delete: Eliminar %{model}
+    back: Volver al menú
+    confirm: Desea eliminar el %{model}?
+    accept: Sí
+    reject: Cancelar
+    save: Guardar
+    saving: Guardando...
+    created_message: El %{model} se creó satisfactoriamente.
+    updated_message: El %{model} se actualizó satisfactoriamente.
+    destroy_message: El %{model} se eliminó satisfactoriamente.
+  activerecord:
+    modules:
+      hospital:
+        one: Hospital
+        other: Hospitales
+      principal_page: 
+        start_message: PÁGINA PRINCIPAL - INICIO - B66142
+    attributes:
+      hospital:
+        name: Nombre
