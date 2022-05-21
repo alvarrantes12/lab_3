@@ -1,0 +1,29 @@
+es:
+  application:
+    list_of: Lista de %{model}
+    new: Nuevo %{model}
+    show_this: Mostrar %{model}
+    edit_this: Editar %{model}
+    delete_this: Eliminar %{model}
+    available_CRUDs: CRUDs disponibles
+    confirm: Confirmar
+    accept: Aceptar
+    reject: Cancelar
+    back: Atras
+    save: Guardar
+    saving: Guardando
+    want_to_delete: Desea eliminar %{model}
+    tab: Pestaña
+  faq:
+    created: Ha sido creado de manera exitosa %{model}
+    updated: Ha sido editado de manera exitosa %{model}
+    destroyed: Ha sido destruido de manera exitosa %{model}
+  activerecord:
+    modules:
+      hospital:
+        one: Hospital
+        other: Hospitales
+    attributes:
+      hospital:
+        name: Nombre
+  

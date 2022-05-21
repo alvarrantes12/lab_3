@@ -1,0 +1,11 @@
+%p#notice= notice
+
+.card
+  .card-body
+    %h5.card-title 
+      = t('application.show_this', model: t('activerecord.modules.hospital.one'))
+    %p.card-text &nbsp #{@hospital.name}
+
+.row.mt-3
+  .offset-3.col-3
+    = link_to t('application.back'), hospitals_path, class: "btn btn-secundary btn-block"
