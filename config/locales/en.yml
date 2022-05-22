@@ -30,4 +30,25 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  application:
+    list_of: Hospital %{model} 
+    new: New %{model}
+    edit: Edit %{model}
+    name_of: Name of %{model}
+    show: Show %{model}
+    delete: Delete %{model}
+    back_to: Back to %{model}
+    save: Save %{model}
+  activerecord:
+    modules:
+      hospital:
+        one: Hospital
+        other: Hospitals
+        list: List
+        available: Crud's available
+        delete: ¿You want to delete it?
+        cancel: Cancel
+    attributes:
+      hospital:
+         nombre: Name
+         
