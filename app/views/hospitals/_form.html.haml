@@ -1,0 +1,12 @@
+= form_for @hospital, validate: true do |f|
+  .form-group
+    = f.label :name, class: "form-label required"
+    = f.text_field :name, autofocus: true, class: "form-control"
+    
+  .row
+    .offset-3.col-3
+      = link_to t('application.back', model: t('activerecord.modules.hospital.one')), class: "btn btn-secondary btn-block"
+    .col-3
+      = button_tag t('application.save', model: t('activerecord.modules.hospital.one')), class: "btn btn-outline-success btn-block", 
+          'data-siable-with': "Guardando...."
+
