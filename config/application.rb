@@ -18,5 +18,14 @@ module Lenguajes1
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    
+    #Todos los archivos de internalizacion van a estar en esta ruta
+    #join une los archivos
+    I18n.load_path += Dir[Rails.root.join('config', 'locales', '*.{yml}')]
+
+    #decir que el indioma por default es el español de esta app
+    I18n.default_locale = :es
+    
   end
 end

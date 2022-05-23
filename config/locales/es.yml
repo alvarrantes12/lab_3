@@ -1,0 +1,21 @@
+es:
+  application:
+    list_of: Lista de %{model}
+    save: Guardar
+    new: Nuevo %{model}
+    back: Atrás
+    remove: Eliminar
+    edit: Editar %{model}
+    show: Ver
+    AvailableCRUDs: CRUDs disponibles
+
+  activerecord:
+    modules:
+      hospital:
+        one: Hospital
+        other: Hospitales
+
+
+    attributes: #Aqui se ponen los atributos de la tabla
+      hospital:
+        name: Nombre
