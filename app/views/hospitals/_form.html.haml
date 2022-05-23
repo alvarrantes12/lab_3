@@ -5,7 +5,7 @@
 
   .row
     .offset-3.col-3
-      = link_to  'Atrás', hospitals_path, class: "btn btn-secondary btn-block"
+      = link_to  t('application.return_to', model: t('activerecord.modules.hospital.other')), hospitals_path, class: "btn btn-secondary btn-block"
     .col-3
-      = button_tag  'Guardar hospital', class: "btn btn-outline-sucess btn-block",
-        'data-disable-with': "guardando..."
+      = button_tag  t('application.save', model: t('activerecord.modules.hospital.one')), class: "btn btn-outline-sucess btn-block",
+        'data-disable-with': t('application.saving', model: t('activerecord.modules.hospital.one'))

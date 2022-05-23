@@ -1,5 +1,5 @@
 .div.m-4 
-  %h1.mb-4 Bienvenido a la pagina 
-   
+  %h1.mb-4
+    =t('application.welcome_to', model: t('activerecord.modules.dashboard.one'))
 .float-left.ml-4
-  = link_to 'ir a hospitales',  hospitals_path, class: 'btn btn-primary' 
+  = link_to t('application.go', model: t('activerecord.modules.hospital.other')),  hospitals_path, class: 'btn btn-primary' 

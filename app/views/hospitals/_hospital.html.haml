@@ -1,4 +1,5 @@
 %div{:id => "#{dom_id hospital}"}
   %p
-    %strong Name:
+    %strong 
+    =t('application.name_of', model: t('activerecord.modules.hospital.one'))
     = hospital.name

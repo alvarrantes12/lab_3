@@ -1,10 +1,10 @@
 .page-header
   %p{style: "color: green"}= notice
 
-  %h1.mb-4 
-    = "Listado"
+  %h1.mb-4
+    = t('application.list_of', model: t('activerecord.modules.hospital.other'))
     .float-right
-      = link_to 'Nuevo Hopsital', new_hospital_path, class: "btn btn-primary"
+      = link_to t('application.new', model: t('activerecord.modules.hospital.one')), new_hospital_path, class: "btn btn-primary"
 
 %table.table.table-striped
   %thead
@@ -15,9 +15,9 @@
     - @hospitals.each do |hospital|
       %tr
         %td= hospital.name
-        %td= link_to  'mostrar', hospital, class: "btn btn-info"
-        %td= link_to 'editar', edit_hospital_path(hospital), class: "btn btn-success"
-        %td= link_to 'eliminar', hospital , method: :delete , class: "btn btn-danger",
-          data: {confirm: "desea liminarlo",
+        %td= link_to  t('application.show', model: t('activerecord.modules.hospital.one')), hospital, class: "btn btn-info"
+        %td= link_to t('application.edit', model: t('activerecord.modules.hospital.one')), edit_hospital_path(hospital), class: "btn btn-success"
+        %td= link_to t('application.delete', model: t('activerecord.modules.hospital.one')), hospital , method: :delete , class: "btn btn-danger",
+          data: {confirm: t('application.do_you_want_to_delete', model: t('activerecord.modules.hospital.one')),
           accept: "OK",
-          reject: "Cancelar"}
+          reject: t('application.cancel', model: t('activerecord.modules.hospital.one'))}

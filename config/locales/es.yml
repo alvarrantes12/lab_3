@@ -1,0 +1,28 @@
+es:
+  application:
+    list_of: Listado de  %{model}
+    new: Nuevo  %{model}
+    show: Ver %{model}
+    edit: Editar %{model}
+    delete: Eliminar %{model}
+    name_of: Nombre del  %{model}
+    return_to: Volver a %{model}
+    save: guardar %{model}
+    saving: guardando %{model}
+    welcome_to: Bienvenido a  %{model}
+    go: ir a %{model}
+    do_you_want_to_delete: Quieres eliminar el  %{model}
+    cancel: Cancelar
+    was_create: El %{model} fue creado
+    was_delete: El %{model} fue eliminado
+    was_update: El %{model} fue actualizado
+  activerecord:
+    modules:
+      hospital:
+        one: hospital
+        other: hospitales
+      dashboard:
+        one: principal
+    attributes:
+      hospital:
+        name: Hospital
