@@ -1,0 +1,17 @@
+es:
+  application:
+    list_of: Lista de %{model}
+    new: Nuevo %{model}
+    show: Mostrar %{model}
+    edit: Editar %{model}
+    delete: Eliminar %{model}
+    back_to: Volver a %{model}
+    save: Guardar %{model}
+  activerecord:
+    modules:
+      hospital:
+        one: 'Hospital'
+        other: 'Hospitales'
+  attributes:
+    hospital:
+      name: 'Nombre'
