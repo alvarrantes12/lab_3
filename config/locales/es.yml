@@ -1,0 +1,31 @@
+es:
+  application:
+    list_of: Lista de %{model}
+    new: Nuevo
+    new_model: Nuevo %{model}
+    show: Ver
+    show_model: Ver %{model}
+    edit: Editar
+    edit_model: Editar %{model}
+    delete: Borrar
+    delete_model: Borrar %{model}
+    back_to: Regresar
+    back_to_model: Regresar a %{model}
+    save: Guardar
+    save_model: Guardar %{model}
+    saving: Guardando...
+    available_cruds: CRUDs disponibles
+    delete_question: ¿Desea eliminarlo?
+    accept_ok: Confirmar
+    cancel: Cancelar
+    
+  activerecord:
+    modules:
+      hospital:
+        one: 'hospital'
+        other: 'hospitales'
+
+  atributtes:
+    hospital:
+      name: 'Nombre'
+
