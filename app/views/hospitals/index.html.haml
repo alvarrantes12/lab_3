@@ -1,0 +1,32 @@
+.page-header
+  %p{:style => "color: green"}= notice
+
+  %h1.mb-4
+    =  t('application.list_of', model: t('activerecord.modules.hospital.other'))
+    .float_right
+      = link_to  t('application.new', model: t('activerecord.modules.hospital.one')), new_hospital_path, class: "btn btn-primary"
+
+%table.table.table-striped
+  %thead
+     %tr
+        %th=  t('activerecord.attributes.hospital.name')
+        %th
+        %th
+        %th
+
+
+%tbody
+  - @hospitals.each do |hospital|
+    %tr
+      %td= hospital.name
+      %td= link_to  t('application.see'), hospital, class: "btn btn-info"
+      %td= link_to = t('application.edit', model: t('activerecord.modules.hospital.one')), edit_hospital_path(hospital), class: "btn btn-success"
+      %td= link_to  t('application.destroy'), hospital, method: :delete, class: "btn btn-danger"
+                              data: {confirm:  t('application.want_to'), 
+                              accept:  t('application.accept'), 
+                              reject:  t('application.cancel')}
+
+
+
+
+

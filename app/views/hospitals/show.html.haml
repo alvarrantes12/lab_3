@@ -1,0 +1,10 @@
+%p#notice= notice
+
+.card.ml-4.m-4
+  .card-body
+    %h5.card-tittle Nombre:
+    %p.card-text &nbsp #{hospital.name}
+
+.row.mt-3
+  .offset-3.col-3
+    = link_to t('application.go_back'), hospitals_path, class: "btn btn-secondary btn-block"
