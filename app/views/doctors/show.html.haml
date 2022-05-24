@@ -1,0 +1,22 @@
+
+%p#notice= notice
+.card.ml-4.mr-4
+  .card-body
+    %h5.card-title 
+      =t("activerecord.attributes.doctor.first_name")
+    %p.card-text &nbsp #{@doctor.first_name}
+    %h5.card-title 
+      =t("activerecord.attributes.doctor.last_name")
+    %p.card-text &nbsp #{@doctor.last_name}
+    %h5.card-title 
+      =t("activerecord.attributes.doctor.code")
+    %p.card-text &nbsp #{@doctor.code}
+    %h5.card-title 
+      =t("activerecord.attributes.doctor.hospital_name")
+    %p.card-text &nbsp #{@doctor.hospital.name}
+    %h5.card-title 
+      =t("activerecord.attributes.doctor.specialty")
+    %p.card-text &nbsp #{t("activerecord.attributes.doctor.specialties.#{@doctor.specialty}")}
+.row.mt-3 
+  .offset-3.col-3
+    =link_to t('application.back'), doctors_path, class: "btn btn-secondary btn-block"

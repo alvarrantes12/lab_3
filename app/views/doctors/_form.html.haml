@@ -1,0 +1,24 @@
+= form_for @doctor, validate: true do |f|
+  .form-group.ml-4.mr-4
+    = f.label :first_name, class: "form-label required"
+    = f.text_field :first_name, autofocus: true, class: "form-control"
+  .form-group.ml-4.mr-4
+    = f.label :last_name, class: "form-label required"
+    = f.text_field :last_name, autofocus: true, class: "form-control"
+  .form-group.ml-4.mr-4
+    = f.label :code, class: "form-label required"
+    = f.number_field :code, autofocus: true, class: "form-control"
+
+  .form-group.ml-4.mr-4
+    = f.label :specialty, class: ' form-label required'
+    = f.select(:specialty, options_for_select(specialties, @doctor.specialty), {prompt: t('application.select')}, class:'form-control')
+
+  .form-group.ml-4.mr-4
+    = f.label :hospital_id, class: 'form-label required'
+    = f.select(:hospital_id, options_for_select(@hospitals, @doctor.hospital),{prompt: t('application.select')}, class: 'form-control')
+    
+  .row
+    .offset-3.col-3
+      = link_to t('application.back'), doctors_path, class: "btn btn-secondary btn-block"
+    .col-3
+      = button_tag t('application.save') , class: "btn btn-outline-success btn-block", 'data-disable-with': "Guardando"

@@ -1,6 +1,6 @@
 = form_for @hospital, validate: true do|f|
   .form-group.ml-4.mr-4
-    = f.label t('activerecord.attributes.hospitals.name'), class: "form-label required"
+    = f.label t('activerecord.attributes.hospital.name'), class: "form-label required"
     = f.text_field :name, autofocus: true,  class: "form-control"
   .row
     .offset-3.col-3
@@ -8,5 +8,3 @@
     .col-3
       = button_tag  t('application.save'), class: "btn btn-outline-success btn-block " , 'data-disable-with': "Guardando..."
 
-
--# t('application.create', model: t('activerecord.modules.owner.one'))

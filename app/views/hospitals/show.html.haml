@@ -1,7 +1,8 @@
 %p#notice= notice
 .card.ml-4.mr-4
   .card-body
-    %h5.card-title Nombre:
+    %h5.card-title 
+      =t("activerecord.attributes.hospital.name")
     %p.card-text &nbsp #{@hospital.name}
 .row.mt-3 
   .offset-3.col-3

@@ -9,6 +9,7 @@ en:
     save: Save
     destroy: Delete
     create: Create
+    delete_this: Delete this 
   activerecord:
     modules:
       hospitals:
@@ -16,4 +17,4 @@ en:
         other: hospitals
     attributes:
       hospitals:
-        name: Name
+        name: Namet. string :first_name

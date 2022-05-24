@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+git_source(:github) { |repo| 'https://github.com/#{repo}.git' }
 
 ruby "2.7.0"
 
@@ -9,6 +9,7 @@ gem "font-awesome-sass", "~> 4.4.0"
 gem "haml"
 gem "importmap-rails"
 gem "jbuilder"
+gem "jquery-rails"
 gem "pg", "~> 1.1"
 gem "puma", "~> 5.0"
 gem "rails", "~> 7.0.2", ">= 7.0.2.3"

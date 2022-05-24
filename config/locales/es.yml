@@ -2,18 +2,41 @@ es:
   application:
     list_of: Lista del %{model}
     new: Nuevo %{model}
+    editing_model: Editando %{model}
     show: Mostrar
-    edit_model: Editar %{model}
     edit: Editar
     back: Atras
     save: Guardar
-    destroy: Eliminar
+    delete: Eliminar
     create: Crear
+    select: Seleccione
+    want_to_delete: Desea eliminar este %{model}
+    was_destroyed: El %{model} ha sido eliminado exitosamente.
+    was_created: El %{model} ha sido creado exitosamente.
+    was_updated: El %{model} ha sido actualizado exitosamente.
+    cruds_available: CRUDs disponibles
   activerecord:
     modules:
       hospitals:
         one: hospital
+        irst_upper_one: Hospital
         other: hospitales
+        first_upper_other: Hospitales
+      doctors:
+        one: doctor
+        first_upper_one: Doctor
+        other: doctores
+        first_upper_other: Doctores
     attributes:
-      hospitals:
+      doctor:
+        first_name: Nombre
+        last_name: Apellido
+        code: Codigo
+        hospital_name: Nombre hospital
+        specialty: Especialidad
+        specialties:
+          neuro: Neurología
+          onco: Oncología
+          obgyn: Ginecología
+      hospital:
         name: Nombre
