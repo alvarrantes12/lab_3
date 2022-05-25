@@ -1,0 +1,21 @@
+= form_for @appointment, validate: true do |f|
+  .form-group.ml-4.mr-4
+    = f.label :date, class: "form-label required"
+    = f.text_field :date, autofocus: true, class: "form-control"
+
+  .form-group.ml-4.mr-4
+    = f.label :doctor_id, class: 'form-label required'
+    = f.select(:doctor_id, options_for_select(@doctors, @appointment.doctor),
+                        {prompt:"Seleccione"}, class:'form-control')
+        
+  .form-group.ml-4.mr-4
+    = f.label :patient_id, class: 'form-label required'
+    = f.select(:patient_id, options_for_select(@patients, @appointment.patient),
+                          {prompt:"Seleccione"}, class:'form-control')
+
+  .row
+    .offset-3.col-3
+      = link_to "Atrás", doctors_path, class: "btn btn-secondary btn-block"
+    .col-3
+      = button_tag "Guardar" , class: "btn btn-outline-success btn-block", 'data-disable-with': "Guardando"
+

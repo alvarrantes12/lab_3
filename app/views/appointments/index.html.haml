@@ -1,0 +1,29 @@
+.div.m-4
+  .page.header
+    %p{style: "color: green"}= notice
+    %h1.mb-4
+      = "Lista de citas"
+      .float-right
+        = link_to "Nueva cita", new_appointment_path, class: "btn btn-primary"
+
+  %table.table.table-striped
+    %thread
+      %tr
+        %th= "Fecha"
+        %th= "Doctor"
+        %th= "Paciente"
+        %th
+        %th
+        %th
+    %tbody
+      - @appointments.each do |appointment|
+        %tr
+          %td= appointment.date
+          %td= "#{appointment.doctor.first_name} #{appointment.doctor.last_name} - #{appointment-doctor.code}"
+          %td= "#{appointment.patient.first_name} #{appointment.patient.last_name}"
+          %td= link_to t('application.show_this'), appointment, class: "btn btn-info"
+          %td= link_to t('application.edit_this'), edit_appointment_path(appointment), class: "btn btn-success"
+          %td= link_to t('application.delete_this'), appointment, method: :delete, class: "btn btn-danger",
+                                data: {confirm: "¿Desea eliminarlo?",
+                                accept: "OK",
+                                reject: "Cancelar"}

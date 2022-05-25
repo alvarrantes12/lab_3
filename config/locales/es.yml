@@ -1,0 +1,27 @@
+es:
+  application:
+    list_of: Lista de %{model}
+    new: Nuevo %{model}
+    show: Mostrar %{model}
+    edit: Editar %{model}
+    remove: Eliminar %{model}
+    back_to: Volver a %{model}
+    save: Guardar %{model}
+  activerecord:
+    modules:
+      hospital:
+           one: Hospital
+           other: Hospitales
+    attributes:
+      hospital:
+        name: Nombre
+      doctor:
+        specialities:
+          neuro: Neurología
+          onco: Oncología
+          obgyn: Ginecología
+          cardio: Cardiología
+
+    created: Ha sido creado de manera exitosa
+    update: Ha sido editado de manera exitosa
+    delete: Se ha eliminado correctamente

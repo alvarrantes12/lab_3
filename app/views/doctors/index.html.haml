@@ -1,0 +1,35 @@
+.div.m-4
+  .page.header
+    %p{:style => "color: green"}= notice
+    %h1.mb-4
+      = "Lista de doctores"
+      .float-right
+        = link_to "Nuevo doctor", new_doctor_path, class: "btn btn-primary"
+        
+  %table.table.table-striped
+    %thread
+      %tr
+        %th= "Nombre"
+        %th= "Apellido"
+        %th= "Código"
+        %th= "Especialidad"
+        %th= "Hospital"
+        %th
+        %th
+        %th
+    %tbody
+      - @doctors.each do |doctor|
+        %tr
+          %td= doctor.first_name
+          %td= doctor.last_name
+          %td= doctor.code
+          %td= t("activerecord.attributes.doctor.specialities.#{doctor.speciality}")
+          %td= doctor.hospital.name
+          %td= link_to t('application.show_this'), doctor, class: "btn btn-info"
+          %td= link_to t('application.edit_this'), edit_doctor_path(doctor), class: "btn btn-success"
+          %td= link_to t('application.delete_this'), doctor, method: :delete, class: "btn btn-danger",
+                                data: {confirm: "¿Desea eliminarlo?",
+                                accept: "OK",
+                                reject: "Cancelar"}
+
+
