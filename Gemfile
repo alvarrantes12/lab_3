@@ -1,3 +1,4 @@
+Resolving dependencies...
 source "https://rubygems.org"
 git_source(:github) { |repo| 'https://github.com/#{repo}.git' }
 
@@ -12,6 +13,7 @@ gem "jbuilder"
 gem "jquery-rails"
 gem "pg", "~> 1.1"
 gem "puma", "~> 5.0"
+gem "rack-cors"
 gem "rails", "~> 7.0.2", ">= 7.0.2.3"
 gem "sass-rails", "~> 5.0"
 gem "sprockets-rails"

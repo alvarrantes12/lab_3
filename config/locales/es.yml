@@ -15,18 +15,9 @@ es:
     was_created: El %{model} ha sido creado exitosamente.
     was_updated: El %{model} ha sido actualizado exitosamente.
     cruds_available: CRUDs disponibles
+    accept: Aceptar
+    reject: Cancelar
   activerecord:
-    modules:
-      hospitals:
-        one: hospital
-        irst_upper_one: Hospital
-        other: hospitales
-        first_upper_other: Hospitales
-      doctors:
-        one: doctor
-        first_upper_one: Doctor
-        other: doctores
-        first_upper_other: Doctores
     attributes:
       doctor:
         first_name: Nombre
@@ -40,3 +31,30 @@ es:
           obgyn: Ginecología
       hospital:
         name: Nombre
+      patient:
+        first_name: Nombre
+        last_name: Apellido
+        id_number: Cedula
+      appointment:
+        date: Fecha
+    modules:
+      hospitals:
+        one: hospital
+        irst_upper_one: Hospital
+        other: hospitales
+        first_upper_other: Hospitales
+      doctors:
+        one: doctor
+        first_upper_one: Doctor
+        other: doctores
+        first_upper_other: Doctores
+      patients:
+        one: paciente
+        first_upper_one: Paciente
+        other: pacientes
+        first_upper_other: Pacientes
+      appointments:
+        one: cita
+        first_upper_one: Cita
+        other: citas
+        first_upper_other: Citas
